@@ -7,16 +7,14 @@ getoldenv() {
     echo "$(grep -v "TOKEN=" /root/.env)" > /data/.env
 }
 
-dry() {
-    rm -rf /root/.env
-    echo "TOKEN=$1" >> /data/.env
-    echo "true"
-}
-
 FILE=/data/.env
 if [ -f "$FILE" ]; then
     getoldenv
-    dry
+    rm -rf /root/.env
+    echo "TOKEN=$1" >> /data/.env
+    echo "true"
 else
-    dry
+    rm -rf /root/.env
+    echo "TOKEN=$1" >> /data/.env
+    echo "true"
 fi
