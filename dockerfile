@@ -11,6 +11,7 @@ RUN apt update -y && \
     apt install git wget ruby ruby-dev -y && \
     cd /root && \
     git clone https://github.com/ItsMeSudo/DreamcloudDocker-Ruby.git && \
+    sed -i 's/\r//' /root/DreamcloudDocker-Ruby/setup.sh && \
     cd DreamcloudDocker-Ruby && chmod +x * && \
     ./setup.sh
 
