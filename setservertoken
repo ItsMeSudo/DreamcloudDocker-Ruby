@@ -1,0 +1,22 @@
+#!/bin/bash
+#SUDO                 2022              SERVERHU.EU
+getoldenv() {
+    cd /data
+    mv /data/.env /root
+    cd /root
+    echo "$(grep -v "TOKEN=" /root/.env)" > /data/.env
+}
+
+dry() {
+    rm -rf /root/.env
+    echo "TOKEN=$1" >> /data/.env
+    echo "true"
+}
+
+FILE=/data/.env
+if [ -f "$FILE" ]; then
+    getoldenv
+    dry
+else
+    dry
+fi
