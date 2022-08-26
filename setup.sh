@@ -7,7 +7,7 @@ cd /root && \
     mkdir -p /tmp/sudo && \
     gem install discordrb && \
     gem install dotenv && \
-    gem install ruby_figlet --no-rdoc --no-ri && \
+    gem install ruby_figlet && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/container-start && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/gitclone && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/setservertoken && \
