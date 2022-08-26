@@ -6,6 +6,7 @@ cd /root && \
     cd /root/DreamcloudDocker-Ruby && \
     mkdir -p /tmp/sudo && \
     gem install discordrb && \
+    gem install dotenv && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/container-start && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/gitclone && \
     sed -i 's/\r//' /root/DreamcloudDocker-Ruby/setservertoken && \
