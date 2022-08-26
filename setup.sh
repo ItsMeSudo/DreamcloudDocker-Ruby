@@ -2,7 +2,7 @@
 #SUDO                 2022              SERVERHU.EU
 
 cd /root && \
-    apt install unzip wget git curl -y && \ 
+    apt install unzip wget git curl ruby ruby-dev libmagickwand-dev -y && \ 
     cd /root/DreamcloudDocker-Ruby && \
     mkdir -p /tmp/sudo && \
     gem install discordrb && \
